@@ -4,25 +4,25 @@ import { Menu } from "lucide-react";
 export default function Navbar() {
   return (
     <header
-      className="fixed top-0 left-0 w-full z-50"
+      className="fixed top-0 left-0 w-full z-50 border-b border-white/10"
       style={{ backgroundColor: "#0E1228" }}
     >
-      <div className="max-w-[1800px] mx-auto px-10 h-16 flex items-center justify-between">
+      <div className="relative max-w-[1800px] mx-auto h-20 px-8 flex items-center">
 
         {/* Logo */}
-        <div className="flex items-center">
+        <a href="#" className="flex items-center z-10">
           <Image
-            src="/images/logo.png"
-            alt="Nobelcrest Logo"
-            width={160}
-            height={50}
+            src="/logo.png"
+            alt="Logo"
+            width={180}
+            height={80}
             priority
-            className="object-contain"
+            className="object-contain w-auto h-14"
           />
-        </div>
+        </a>
 
-        {/* Nav Links */}
-        <nav className="hidden lg:flex items-center gap-10 text-[13px] uppercase tracking-[2px] text-white">
+        {/* Center Nav */}
+        <nav className="absolute left-1/2 -translate-x-1/2 hidden lg:flex items-center gap-12 text-[13px] uppercase tracking-[2px] text-white">
           <a
             href="#"
             className="hover:text-[#EBB337] transition-colors duration-300"
@@ -60,12 +60,14 @@ export default function Navbar() {
         </nav>
 
         {/* Right Side */}
-        <div className="flex items-center gap-6">
-          <Menu
-            size={24}
-            strokeWidth={1.5}
-            style={{ color: "#EBB337" }}
-          />
+        <div className="ml-auto flex items-center">
+          <button className="flex items-center justify-center">
+            <Menu
+              size={26}
+              strokeWidth={1.5}
+              style={{ color: "#EBB337" }}
+            />
+          </button>
         </div>
 
       </div>

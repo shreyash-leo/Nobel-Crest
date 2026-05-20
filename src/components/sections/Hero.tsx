@@ -1,45 +1,44 @@
+// components/sections/Hero.tsx
+import Image from "next/image";
+
 export default function Hero() {
   return (
-    <section className="pt-16 h-[100vh] bg-[#efe8df]">
+    <section className="relative h-screen overflow-hidden">
 
-      <div className="grid lg:grid-cols-2 h-full">
+      {/* Banner Image */}
+      <Image
+        src="/images/banner.png"
+        alt="Luxury Residence"
+        fill
+        priority
+        className="object-cover"
+      />
 
-        {/* Left Side */}
-        <div className="flex items-center px-16">
+      {/* Content */}
+      <div className="relative z-10 flex h-full items-center justify-center px-6">
+        <div className="text-center">
 
-          <div>
-            <h1 className="text-7xl leading-[0.95] font-medium uppercase max-w-[600px]">
-              Two Milestones. One Dream Home.
-            </h1>
-          </div>
+          <p className="text-sm uppercase tracking-[4px] text-[#EBB337] mb-6">
+            Luxury Residences
+          </p>
 
-        </div>
+          <h1 className="text-white text-5xl md:text-7xl leading-[0.95] font-medium uppercase max-w-[1000px]">
+            Two Milestones.
+            <br />
+            One Dream Home.
+          </h1>
 
-        {/* Right Side */}
-        <div className="bg-white flex items-center justify-center">
+          <p className="mt-8 text-white/80 text-lg max-w-[600px] mx-auto leading-relaxed">
+            Experience premium living spaces crafted with timeless
+            architecture, modern elegance, and unmatched comfort.
+          </p>
 
-          <div className="max-w-[500px] text-center">
-
-            <p className="text-sm uppercase tracking-[2px] mb-8">
-              Luxury Residences
-            </p>
-
-            <h2 className="text-6xl leading-tight font-medium">
-              Pay 40% now &
-              <br />
-              60% on possession.
-            </h2>
-
-            <button className="mt-10 border border-[#b89b5e] px-10 py-4 uppercase tracking-[2px] text-[#b89b5e]">
-              Book Your Home
-            </button>
-
-          </div>
+          <button className="mt-10 border border-[#EBB337] px-10 py-4 uppercase tracking-[2px] text-[#EBB337] hover:bg-[#EBB337] hover:text-[#0E1228] transition-all duration-300">
+            Book Your Home
+          </button>
 
         </div>
-
       </div>
-
     </section>
   );
 }
