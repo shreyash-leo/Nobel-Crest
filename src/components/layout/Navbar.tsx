@@ -4,7 +4,7 @@ import { Menu } from "lucide-react";
 export default function Navbar() {
   return (
     <header
-      className="fixed top-0 left-0 w-full z-50 border-b border-white/10"
+      className="fixed top-0 left-0 w-full z-[999] border-b border-white/10"
       style={{ backgroundColor: "#0E1228" }}
     >
       <div className="relative max-w-[1800px] mx-auto h-20 px-8 flex items-center">
@@ -12,7 +12,7 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#" className="flex items-center z-10">
           <Image
-            src="/logo.png"
+            src="/images/optimized/logo.webp"
             alt="Logo"
             width={180}
             height={80}
